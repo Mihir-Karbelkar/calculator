@@ -13,9 +13,13 @@ class Cell extends CustomElementWrapper {
 
     </style>
     <link rel="stylesheet" href="static/js/components/Cell/style.css"/>
-    <div class="cell-element"><span ><slot></slot></span></div>
+    <div class="cell-element"></div>
                     `;
     super(template);
+    const value = this.getAttribute('value');
+    this.shadowRoot.querySelector('div').setAttribute('value', value);
+    this.shadowRoot.querySelector('div').textContent =
+      this.getAttribute('label');
   }
 }
 
