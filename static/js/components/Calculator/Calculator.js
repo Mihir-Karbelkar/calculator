@@ -52,8 +52,8 @@ class Calculator extends CustomElementWrapper {
         <cell-element class="" value="." action="decimal"><slot name="cell-label">.</slot></cell-element>
         </div>
         <div class="ops">
-        <cell-element class=" divide" value="/"  action="operator"><slot name="cell-label">/</slot></cell-element>
-        <cell-element class="" value="*" action="operator"><slot name="cell-label">X</slot></cell-element>
+        <cell-element class=" divide" value="/"  action="operator"><slot name="cell-label">÷</slot></cell-element>
+        <cell-element class="" value="*" action="operator"><slot name="cell-label">×</slot></cell-element>
         <cell-element class="" value="-" action="operator"><slot name="cell-label">-</slot></cell-element>
         <cell-element class="" value="+" action="operator"><slot name="cell-label">+</slot></cell-element>
         <cell-element class="equal" value="" action="equal"><slot name="cell-label">=</slot></cell-element>
@@ -103,8 +103,8 @@ class Calculator extends CustomElementWrapper {
     }
 
     tracker.textContent = this.equationTracker
-      .replaceAll('*', 'X')
-      .replaceAll('/', '');
+      .replaceAll('*', '×')
+      .replaceAll('/', '÷');
     if (tracker.textContent) tracker.setAttribute('title', tracker.textContent);
     if (type === 'equal') {
       output.textContent = eval(this.equationTracker);
