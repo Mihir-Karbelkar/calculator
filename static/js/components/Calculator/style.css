@@ -1,0 +1,112 @@
+:host {
+  width: 480px;
+}
+.top-dots-container {
+  position: absolute;
+  width: 100%;
+}
+.top-left-dots {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  display: flex;
+}
+.top-left-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  background-color: #e0d9ec;
+  position: relative;
+  margin-left: 6px;
+}
+.calculator-input {
+  height: 80px;
+}
+.calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0;
+  font-size: 48px;
+  font-weight: 200;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.5);
+  --calcBorderRadius: 12px;
+}
+
+cell-element {
+  height: 50px;
+  box-sizing: border-box;
+  background: #7c7a7b;
+  color: black;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.calculator .display.special-code,
+.calculator .nums .cell-element.special-code,
+.calculator .ops .cell-element.special-code {
+  background: #676566;
+  color: #f6f3ff;
+}
+.calculator .display {
+  grid-column: 1/5;
+  text-align: right;
+  background-color: #fff;
+  border-top-left-radius: var(--calcBorderRadius);
+  border-top-right-radius: var(--calcBorderRadius);
+}
+.calculator .ops {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.calculator .num-0 {
+  border-bottom-left-radius: var(--calcBorderRadius);
+}
+.calculator .equal {
+  border-bottom-right-radius: var(--calcBorderRadius);
+}
+.calculator .ops cell-element {
+  background: linear-gradient(to bottom, #f7c86e 1%, #f69377 100%);
+  background-attachment: fixed;
+  color: #f6f3ff;
+}
+.calculator .nums {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+
+.calculator .nums .num-0 {
+  grid-column: 1/3;
+}
+
+#operations {
+  height: 30px;
+  color: #e0d9ec;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px 10px;
+  width: 100%;
+  margin-top: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.calc-input {
+  height: 80px;
+  padding: 0px 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+cell-element {
+  border-top: solid 1px #e2d9ec;
+  border-left: solid 1px #e2d9ec;
+
+  background-color: #f6e9ff;
+}

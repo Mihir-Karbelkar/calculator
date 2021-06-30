@@ -1,0 +1,27 @@
+html,
+body {
+  background: linear-gradient(135deg, #a763cb 30%, #cf79a2, #f69377);
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  font-family: monospace;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.justify-content-start {
+  justify-content: flex-start;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.center-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 10;
+}
